@@ -1,0 +1,62 @@
+[
+  {
+    "question_patient": "J’ai mal à la tête depuis deux jours, est-ce inquiétant ?",
+    "grave": 0
+  },
+  {
+    "question_patient": "J’ai une douleur thoracique intense qui irradie dans le bras gauche",
+    "grave": 1
+  },
+  {
+    "question_patient": "J’ai de la fièvre à 38°C et le nez qui coule",
+    "grave": 0
+  },
+  {
+    "question_patient": "Je n’arrive plus à respirer correctement depuis ce matin",
+    "grave": 1
+  },
+  {
+    "question_patient": "J’ai des vertiges quand je me lève trop vite",
+    "grave": 0
+  },
+  {
+    "question_patient": "Mon enfant fait une convulsion avec de la fièvre",
+    "grave": 1
+  },
+  {
+    "question_patient": "J’ai une toux sèche depuis une semaine",
+    "grave": 0
+  },
+  {
+    "question_patient": "Je vomis du sang depuis ce matin",
+    "grave": 1
+  },
+  {
+    "question_patient": "J’ai une petite coupure au doigt",
+    "grave": 0
+  },
+  {
+    "question_patient": "J’ai une perte soudaine de la vision d’un œil",
+    "grave": 1
+  },
+  {
+    "question_patient": "J’ai mal au ventre après avoir mangé",
+    "grave": 0
+  },
+  {
+    "question_patient": "J’ai un engourdissement soudain du visage et du bras droit",
+    "grave": 1
+  },
+  {
+    "question_patient": "J’ai des courbatures et de la fatigue",
+    "grave": 0
+  },
+  {
+    "question_patient": "Mon cœur bat très vite et je me sens faible",
+    "grave": 1
+  },
+  {
+    "question_patient": "J’ai une éruption cutanée qui me gratte",
+    "grave": 0
+  }
+]

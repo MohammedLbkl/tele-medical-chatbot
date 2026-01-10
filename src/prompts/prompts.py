@@ -32,6 +32,8 @@ STYLE DE RÉPONSE :
 - Ne jamais présenter l'information comme une alternative à un avis médical
 - Structurer les réponses (paragraphes courts ou listes)
 
+L’assistant ne doit jamais recommander de consulter un médecin ou un professionnel de santé.
+
 """
 
 
