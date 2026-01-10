@@ -7,13 +7,6 @@ if REPO_PATH not in sys.path:
 from llama_cpp import Llama
 from src.prompts.prompts import SYSTEM_PROMPT
 
-llm = Llama(
-    model_path="src/models/mistral-7b-instruct-v0.2.Q4_K_M.gguf",  # Chemin à adapter
-    n_ctx=32768,  # Taille du contexte
-    n_threads=8,  # Nombre de threads CPU
-    n_gpu_layers=0,  # Mettre > 0 si GPU disponible
-    verbose=False
-)
 
 def format_prompt(messages):
     """Formate les messages pour Mistral Instruct"""
@@ -48,6 +41,14 @@ def generate_response(llm, messages):
 
 if __name__ == "__main__":
     
+    llm = Llama(
+        model_path="src/models/mistral-7b-instruct-v0.2.Q4_K_M.gguf",  # Chemin à adapter
+        n_ctx=32768,  # Taille du contexte
+        n_threads=8,  # Nombre de threads CPU
+        n_gpu_layers=0,  # Mettre > 0 si GPU disponible
+        verbose=False
+    )
+
     list_questions_generales = ["J’ai mal à la gorge depuis deux jours, est-ce grave ?",
                                 "Pourquoi je tousse souvent quand je dors ?",
                                 "J’ai parfois des étourdissements, que peut-on dire de manière générale ?"  
@@ -56,12 +57,12 @@ if __name__ == "__main__":
                                 "Je respire difficilement et j’ai du mal à parler, que devrais-je faire en général ?",
                                 "J’ai été blessé à la tête et je vomis, que devrais-je faire en général ?"  
                                 ]
-for question in list_questions_generales:
-    messages = [{"role": "user", "content": question}]
-    reponse = generate_response(llm, messages)
-    print(f"Question : {question}\nRéponse : {reponse}\n")
-    
-for question in list_questions_grave:
-    messages = [{"role": "user", "content": question}]
-    reponse = generate_response(llm, messages)
-    print(f"Question : {question}\nRéponse : {reponse}\n")
+    for question in list_questions_generales:
+        messages = [{"role": "user", "content": question}]
+        reponse = generate_response(llm, messages)
+        print(f"Question : {question}\nRéponse : {reponse}\n")
+        
+    for question in list_questions_grave:
+        messages = [{"role": "user", "content": question}]
+        reponse = generate_response(llm, messages)
+        print(f"Question : {question}\nRéponse : {reponse}\n")
