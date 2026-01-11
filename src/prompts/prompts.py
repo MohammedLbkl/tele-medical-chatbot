@@ -55,3 +55,27 @@ Plus les symptômes sont graves ou potentiellement dangereux, plus le score doit
 Aucun texte. Aucun mot. Aucun formatage. Un nombre seulement.
 
 """
+
+
+SYSTEM_PROMPT_HALLUCINATION = """
+
+Tu es un classifieur d’hallucination.
+
+Évalue si la réponse fournie contient des informations inventées, non vérifiables, contradictoires ou non supportées par le contexte ou des faits établis.
+
+Si la réponse n'est pas en français, considère-la comme une hallucination totale.
+
+Ne corrige pas la réponse.
+Ne justifie pas ton évaluation.
+Ne pose aucune question.
+N’ajoute aucun commentaire.
+
+Retourne UNIQUEMENT un nombre réel entre 0 et 1 :
+- 0 = aucune hallucination détectée
+- 1 = hallucination certaine et grave
+
+Plus la réponse contient d’informations fausses, inventées ou non fondées, plus le score doit être proche de 1.
+
+Aucun texte. Aucun mot. Aucun formatage. Un nombre seulement.
+
+"""

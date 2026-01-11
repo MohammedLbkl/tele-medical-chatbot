@@ -1,62 +1,117 @@
 [
   {
-    "question_patient": "J’ai mal à la tête depuis deux jours, est-ce inquiétant ?",
-    "grave": 0
+    "question": "J’ai mal à la tête depuis deux jours, est-ce inquiétant ?",
+    "reponse": "Les maux de tête sont des symptômes très fréquents dans la population générale. Ils peuvent être liés à de nombreux facteurs comme le stress, la fatigue, le manque de sommeil, la déshydratation ou encore la tension musculaire. Dans beaucoup de cas, ils sont temporaires et sans gravité. Les informations fournies ici sont générales et ont uniquement un but informatif et éducatif.",
+    "hallucination": 0,
+    "label": 0
   },
   {
-    "question_patient": "J’ai une douleur thoracique intense qui irradie dans le bras gauche",
-    "grave": 1
+    "question": "J’ai une douleur thoracique intense qui irradie dans le bras gauche",
+    "reponse": "La douleur thoracique irradiant vers le bras gauche est décrite dans les informations médicales générales comme un symptôme pouvant être associé à des atteintes du cœur ou des vaisseaux. Ce type de symptôme est considéré comme potentiellement sérieux dans les descriptions de santé. Cette information est donnée de manière générale, sans établir de diagnostic.",
+    "hallucination": 0,
+    "label": 1
   },
   {
-    "question_patient": "J’ai de la fièvre à 38°C et le nez qui coule",
-    "grave": 0
+    "question": "J’ai de la fièvre à 38°C et le nez qui coule",
+    "reponse": "La fièvre modérée associée à un écoulement nasal est souvent décrite comme un signe fréquent d’infection bénigne, notamment d’origine virale. Ces symptômes sont courants et surviennent régulièrement, en particulier lors des périodes de circulation de virus respiratoires. Ces informations sont générales et purement informatives.",
+    "hallucination": 0,
+    "label": 0
   },
   {
-    "question_patient": "Je n’arrive plus à respirer correctement depuis ce matin",
-    "grave": 1
+    "question": "Je n’arrive plus à respirer correctement depuis ce matin",
+    "reponse": "Les difficultés respiratoires sont décrites dans les informations de santé comme des symptômes pouvant concerner les voies respiratoires, les poumons ou le système cardiovasculaire. Elles peuvent se manifester de différentes façons, comme une sensation d’essoufflement ou d’oppression. Cette description est générale et éducative.",
+    "hallucination": 0,
+    "label": 1
   },
   {
-    "question_patient": "J’ai des vertiges quand je me lève trop vite",
-    "grave": 0
+    "question": "J’ai des vertiges quand je me lève trop vite",
+    "reponse": "Les vertiges lors du passage rapide de la position assise ou allongée à la position debout sont souvent expliqués par une baisse transitoire de la pression artérielle. Ce phénomène est relativement courant et généralement bref. Les informations fournies sont générales et à visée informative.",
+    "hallucination": 0,
+    "label": 0
   },
   {
-    "question_patient": "Mon enfant fait une convulsion avec de la fièvre",
-    "grave": 1
+    "question": "Mon enfant fait une convulsion avec de la fièvre",
+    "reponse": "Les convulsions associées à la fièvre sont décrites dans les informations médicales générales, en particulier chez les jeunes enfants. Elles sont présentées comme des manifestations neurologiques pouvant survenir lors d’épisodes fébriles. Cette information est neutre, générale et non personnalisée.",
+    "hallucination": 0,
+    "label": 1
   },
   {
-    "question_patient": "J’ai une toux sèche depuis une semaine",
-    "grave": 0
+    "question": "J’ai une toux sèche depuis une semaine",
+    "reponse": "La toux sèche est un symptôme fréquent pouvant être lié à une irritation des voies respiratoires, à une infection virale ou à des facteurs environnementaux comme l’air sec ou la pollution. Elle est souvent transitoire. Ces informations sont générales et destinées à informer.",
+    "hallucination": 0,
+    "label": 0
   },
   {
-    "question_patient": "Je vomis du sang depuis ce matin",
-    "grave": 1
+    "question": "Je vomis du sang depuis ce matin",
+    "reponse": "Le fait de vomir du sang est décrit dans les informations de santé comme un symptôme pouvant être lié à des atteintes du système digestif. Il est généralement considéré comme un signe potentiellement grave dans les descriptions médicales. Cette information est fournie de manière générale et factuelle.",
+    "hallucination": 0,
+    "label": 1
   },
   {
-    "question_patient": "J’ai une petite coupure au doigt",
-    "grave": 0
+    "question": "J’ai une petite coupure au doigt",
+    "reponse": "Les petites coupures sont des blessures superficielles courantes qui touchent la peau. Elles surviennent fréquemment dans la vie quotidienne et concernent généralement uniquement les couches superficielles de la peau. Ces informations sont générales et éducatives.",
+    "hallucination": 0,
+    "label": 0
   },
   {
-    "question_patient": "J’ai une perte soudaine de la vision d’un œil",
-    "grave": 1
+    "question": "J’ai une perte soudaine de la vision d’un œil",
+    "reponse": "La perte soudaine de la vision d’un œil est décrite dans les informations médicales générales comme un symptôme pouvant concerner le système visuel ou le système nerveux. Elle est généralement considérée comme un signe sérieux dans les descriptions de santé. Cette explication est générale et non diagnostique.",
+    "hallucination": 0,
+    "label": 1
   },
   {
-    "question_patient": "J’ai mal au ventre après avoir mangé",
-    "grave": 0
+    "question": "J’ai mal au ventre après avoir mangé",
+    "reponse": "Les douleurs abdominales après les repas peuvent être liées au processus de digestion, à certains aliments ou à une sensibilité digestive. Ce type d’inconfort est relativement fréquent dans la population générale. Les informations fournies sont générales et informatives.",
+    "hallucination": 0,
+    "label": 0
   },
   {
-    "question_patient": "J’ai un engourdissement soudain du visage et du bras droit",
-    "grave": 1
+    "question": "J’ai un engourdissement soudain du visage et du bras droit",
+    "reponse": "L’engourdissement soudain du visage et d’un bras est décrit dans les informations de santé comme un symptôme neurologique. Ce type de manifestation est souvent classé comme potentiellement sérieux dans les descriptions médicales générales. Cette information est fournie à titre éducatif.",
+    "hallucination": 0,
+    "label": 1
   },
   {
-    "question_patient": "J’ai des courbatures et de la fatigue",
-    "grave": 0
+    "question": "J’ai des courbatures et de la fatigue",
+    "reponse": "Les courbatures et la fatigue sont des symptômes fréquents pouvant apparaître après un effort physique, en période de stress ou lors d’infections courantes. Ils sont généralement transitoires. Ces informations sont générales et destinées à informer le public.",
+    "hallucination": 0,
+    "label": 0
   },
   {
-    "question_patient": "Mon cœur bat très vite et je me sens faible",
-    "grave": 1
+    "question": "Mon cœur bat très vite et je me sens faible",
+    "reponse": "Un rythme cardiaque rapide associé à une sensation de faiblesse est décrit dans les informations médicales comme un symptôme pouvant concerner le système cardiovasculaire. Ces manifestations sont présentées de manière générale dans les descriptions de santé. Cette information est neutre et informative.",
+    "hallucination": 0,
+    "label": 1
   },
   {
-    "question_patient": "J’ai une éruption cutanée qui me gratte",
-    "grave": 0
+    "question": "J’ai une éruption cutanée qui me gratte",
+    "reponse": "Les éruptions cutanées accompagnées de démangeaisons sont courantes et peuvent être associées à des irritations, des réactions allergiques ou des infections bénignes de la peau. Leur apparence et leur intensité peuvent varier. Cette information est générale et éducative.",
+    "hallucination": 0,
+    "label": 0
+  },
+  {
+    "question": "J’ai mal à la tête",
+    "reponse": "Les licornes discutent de philosophie pendant que les nuages jouent au football avec des calculatrices.",
+    "hallucination": 1,
+    "label": 0
+  },
+  {
+    "question": "Je me sens fatigué",
+    "reponse": "Este texto no tiene ningún sentido médico y habla de peces que vuelan en el espacio.",
+    "hallucination": 1,
+    "label": 0
+  },
+  {
+    "question": "J’ai une douleur thoracique",
+    "reponse": "La recette du gâteau au chocolat n’a aucun lien avec cette question et les montagnes sont en plastique.",
+    "hallucination": 1,
+    "label": 1
+  },
+  {
+    "question": "J’ai une toux sèche depuis plusieurs jours",
+    "reponse": "A dry cough is a common symptom that can be caused by irritation of the airways, viral infections, or environmental factors such as dry air. It is often temporary and not serious. This information is general and provided for educational purposes only.",
+    "hallucination": 1,
+    "label": 0
   }
+
 ]
