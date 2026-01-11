@@ -29,7 +29,7 @@ L’objectif est de générer des réponses aux questions médicales, classifier
 ---
 
 ## Architecture du projet
-
+```yaml
 project/
 │
 ├─ models/ # Contient les fichiers des modèles (.gguf)
@@ -49,18 +49,20 @@ project/
 │  └─ response_generation.py
 │
 └─ README.md
-
+```
 ---
 
 ## Installation
 
 Cloner le repository :
-git clone <URL_DU_REPOSITORY>
-cd project
-
+```bash
+git clone https://github.com/MohammedLbkl/tele-medical-chatbot.git
+cd tele-medical-chatbot
+```
 Installer les dépendances Python :
+```bash
 pip install -r requirements.txt
-
+```
 Vérifier que les modèles .gguf sont placés dans le dossier models/ et que le dataset data.json est dans data/.
 
 ---
