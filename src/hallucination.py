@@ -7,7 +7,7 @@ if REPO_PATH not in sys.path:
 
 from llama_cpp import Llama
 from src.prompts.prompts import SYSTEM_PROMPT_HALLUCINATION
-from src.fonction.llm import model_llm
+from src.llm import model_llm
 from typing import List
 
 

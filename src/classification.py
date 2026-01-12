@@ -6,7 +6,7 @@ if REPO_PATH not in sys.path:
     
 from typing import List
 from llama_cpp import Llama
-from src.fonction.llm import model_llm
+from src.llm import model_llm
 from src.prompts.prompts import SYSTEM_PROMPT_CLASSIFICATION
 
 

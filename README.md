@@ -1,99 +1,101 @@
-"""
-# Projet d'Évaluation de Modèles de Langage pour Téléconsultation
+# Language Model Evaluation Project for Teleconsultation
 
-Ce projet a pour objectif de tester et comparer plusieurs modèles de langage sur des questions médicales afin de générer des réponses informatives, détecter les situations nécessitant une téléconsultation immédiate et évaluer les risques d’hallucinations.
+This project aims to test and compare several language models on medical questions in order to generate informative answers, detect situations requiring immediate teleconsultation, and evaluate the risk of hallucinations.
 
 ---
 
-## Table des matières
+## Table of Contents
 
-- Présentation
-- Architecture du projet
+- Overview
+- Project Architecture
 - Installation
-- Lancement
-- Fonctionnement
-- Résultats
+- Running the Project
+- How It Works
+- Results
 
 ---
 
-## Présentation
+## Overview
 
-Le projet teste trois modèles de langage :
+The project tests three language models:
 
-1. Mistral 7B
-2. Qwen 2.5 1.5B
-3. Qwen 2.5 7B
+1. [Mistral 7B](https://huggingface.co/mistralai/Mistral-7B-v0.1)
+2. [Qwen 2.5 1.5B](https://huggingface.co/Qwen/Qwen2.5-1.5B)
+3. [Qwen 2.5 7B](https://huggingface.co/Qwen/Qwen2.5-7B)
 
-L’objectif est de générer des réponses aux questions médicales, classifier si une téléconsultation est nécessaire et détecter les hallucinations dans les réponses.
+The goal is to generate answers to medical questions, classify whether a teleconsultation is required, and detect hallucinations in the responses.
 
 ---
 
-## Architecture du projet
+## Project Architecture
+
 ```yaml
 project/
 │
-├─ models/ # Contient les fichiers des modèles (.gguf)
-│  ├─ mistral-7b-instruct-v0.2.Q4_K_M.gguf
-│  ├─ qwen2.5-1.5b-instruct-q8_0.gguf
-│  └─ qwen2.5-7b-instruct-q2_k.gguf
-│
-├─ data/ # Contient les fichiers de données JSON
+├─ data/                     # Data used by the chatbot
 │  └─ data.json
 │
-├─ notebooks/ # Notebook principal pour l’évaluation
-│  └─ evaluation.ipynb
+├─ notebooks/                # Notebooks for testing and evaluation
+│  ├─ evaluation.ipynb
+│  └─ test.ipynb
 │
-├─ src/ # Fonctions utilitaires (si applicable)
-│  ├─ model_utils.py
-│  ├─ evaluation.py
-│  └─ response_generation.py
+├─ src/                      # Main source code
+│  │
+│  ├─ prompts/               # Prompt logic and LLM processing
+│  │  ├─ __pycache__/
+│  │  ├─ prompts.py          # Prompt templates
+│  │  ├─ classification.py  # Medical request classification
+│  │  ├─ hallucination.py   # Hallucination handling / reduction
+│  │  └─ llm.py              # Model calling interface (external path)
 │
-└─ README.md
+├─ .gitignore
+├─ README.md                 # Project documentation
+└─ requirements.txt          # Python dependencies
 ```
 ---
 
 ## Installation
 
-Cloner le repository :
+Clone the repository:
 ```bash
 git clone https://github.com/MohammedLbkl/tele-medical-chatbot.git
 cd tele-medical-chatbot
 ```
-Installer les dépendances Python :
+Install Python dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-Vérifier que les modèles .gguf sont placés dans le dossier models/ et que le dataset data.json est dans data/.
+Make sure the .gguf models are placed in the models/ directory and that the data.json dataset is located in the data/ folder.
 
 ---
 
-## Lancement
+## Running the Project
 
-Ouvrir le notebook principal notebooks/evaluation.ipynb et exécuter les cellules dans l’ordre.
-
----
-
-## Fonctionnement
-
-- Configuration des modèles via MODELS_CONFIG  
-- Lecture des questions depuis data.json  
-- Classification de la nécessité d’une téléconsultation  
-- Détection des hallucinations  
-- Analyse via matrices de confusion et rapports de classification  
+Open the main notebook `notebooks/evaluation.ipynb` and run the cells in order.
 
 ---
 
-## Résultats
+## How It Works
 
-Classification téléconsultation :
-- Mistral 7B : Accuracy 0.89
-- Qwen 2.5 1.5B : Accuracy 0.79
-- Qwen 2.5 7B : Accuracy 0.95
+- Model configuration via `MODELS_CONFIG`  
+- Loading questions from `data.json`  
+- Classification of teleconsultation necessity  
+- Hallucination detection  
+- Analysis using confusion matrices and classification reports  
 
-Détection des hallucinations :
-- Mistral 7B : Accuracy 0.84
-- Qwen 2.5 1.5B : Accuracy 0.95
-- Qwen 2.5 7B : Accuracy 0.95
+---
 
-Conclusion : Qwen 2.5 7B offre le meilleur compromis entre précision et fiabilité.
-"""
+## Results
+
+Teleconsultation classification:
+- Mistral 7B: Accuracy 0.89
+- Qwen 2.5 1.5B: Accuracy 0.79
+- Qwen 2.5 7B: Accuracy 0.95
+
+Hallucination detection:
+- Mistral 7B: Accuracy 0.84
+- Qwen 2.5 1.5B: Accuracy 0.95
+- Qwen 2.5 7B: Accuracy 0.95
+
+Conclusion: Qwen 2.5 7B offers the best trade-off between accuracy and reliability.
+
